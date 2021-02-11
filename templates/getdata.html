@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+
+<form action="{% url 'cal' %}" method="post">
+    {% csrf_token %}
+
+    <input type="text" placeholder="Enter the value of x" name="x">
+    <input type="text" placeholder="Enter the value of n" name="n">
+
+    <input type="submit" class="btn btn-success">
+</form>
+
+</body>
+</html>
